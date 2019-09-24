@@ -1,0 +1,48 @@
+{
+  "persons": [
+      {
+        "firstLastName": "John Doe",
+        "position": "CEO",
+        "description": "CEO is a chief executive officer, the highest-rankig corporate officer (executive) or administrator in an organisation.",
+        "picture": null,
+        "social": {
+          "github": "https://github.com",
+          "linkedin": "https://www.linkedin.com",
+          "xing": "https://www.xing.com",
+          "facebook": "https://www.facebook.com" }
+      },
+      {
+        "firstLastName": "Jane Foe",
+        "position": "Project Manager",
+        "description": "Project managers have the responsibility of the planning, procurement and execution of a project, in any undertaking that has a defined scope, defined start and a defined finish.",
+        "picture": "",
+        "social": {
+          "github": "https://github.com",
+          "linkedin": "https://www.linkedin.com",
+          "xing": "https://www.xing.com",
+          "facebook": "https://www.facebook.com" }
+      },
+      {
+        "firstLastName": "Tom Yoe",
+        "position": "Developer",
+        "description": "A developer or computer programmer programs computers or designs the system to match the requirements of a systems analyst.",
+        "picture": "",
+        "social": {
+          "github": "https://github.com",
+          "linkedin": "https://www.linkedin.com",
+          "xing": "https://www.xing.com",
+          "facebook": "https://www.facebook.com" }
+      },
+      {
+        "firstLastName": "Lisa Moe",
+        "position": "HR Manager",
+        "description": "Human resource management (HRM) is the strategic approach to the effective management of people in a company or organization such that they help their business gain a competitive advantage.",
+        "picture": "",
+        "social": {
+          "github": "https://github.com",
+          "linkedin": "https://www.linkedin.com",
+          "xing": "https://www.xing.com",
+          "facebook": "https://www.facebook.com" }
+       }
+  ]
+}
