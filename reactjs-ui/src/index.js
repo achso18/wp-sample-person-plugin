@@ -1,6 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import data from './sample_person_data.json';
+
+const persons = data.persons;
+let person = "";
+
 
 function PersonDescModal(props) {
   return (
@@ -12,6 +17,14 @@ function PersonDescModal(props) {
         </div>
         <div className="modal-content">
           <p>{props.description}</p>
+        </div>
+        <div className="modal-social">
+          <ul className="modal-social-list">
+            <li><a href={props.link_github}>Github</a></li>
+            <li><a href={props.link_linkedin}>LinkedIn</a></li>
+            <li><a href={props.link_xing}>Xing</a></li>
+            <li><a href={props.link_facebook}>Facebook</a></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -30,7 +43,7 @@ function PersonPic(props) {
 function PersonName(props) {
   return (
     <div className="sample-plugin-person-fname">
-      {props.firstName} {props.lastName}
+      {props.firstLastName == null ? "Name not recognized!" : props.firstLastName}
     </div>
   );
 }
@@ -48,13 +61,14 @@ class Person extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      modalDisplay: "none",
-      firstName: "John",
-      lastName: "Doe",
-      position: "CEO",
-      description: "CEO is a chief executive officer, the highest-rankig corporate officer (executive) or administrator in an organisation.",
-      picture: null,
+      modalDisplay: "none"
+    }
 
+    for (let p of persons) {
+      if (p.firstLastName.toLowerCase() == this.props.person_name.toLowerCase()) {
+        person = p;
+        break;
+      }
     }
   }
 
@@ -72,27 +86,31 @@ class Person extends React.Component {
       <div className="sample-plugin-person">
           <div className="sample-plugin-person-card" onClick={() => this.handleClick()}>
           <PersonPic
-            picture={this.state.picture}
+            picture={null}
           />
           <div className="sample-plugin-person-detail">
             <PersonName
-              firstName={this.state.firstName}
-              lastName={this.state.lastName}
+              firstLastName={person.firstLastName}
             />
             <PersonPos
-              position={this.state.position}
+              position={person.position}
             />
           </div>
         </div>
         <PersonDescModal
           display={this.state.modalDisplay}
           onClick={() => this.handleClick()}
-          position={this.state.position}
-          description={this.state.description}
+          position={person.position}
+          description={person.description}
+          link_github={person.social.github}
+          link_linkedin={person.social.linkedin}
+          link_xing={person.social.xing}
+          link_facebook={person.social.facebook}
         />
       </div>
     );
   }
 }
 
-ReactDOM.render(<Person />, document.getElementById('root'));
+let rootElement = document.getElementById('root');
+ReactDOM.render(<Person person_name={rootElement.getAttribute('person_name')}/>, rootElement);
