@@ -1,0 +1,30 @@
+.sample-plugin-person-card {
+  margin: 50px auto;
+  padding: 20px;
+  width: 400px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: transform 0.3s;
+}
+
+.sample-plugin-person-card:hover,
+.sample-plugin-person-card:focus {
+    cursor: pointer;
+    transform: scale(1.1, 1.1);
+}
+
+.sample-plugin-person-detail {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.sample-plugin-person-pic {
+  background-color: blue;
+  border-radius: 2%;
+  height: 400px;
+  width: 400px;
+  color: white;
+  padding-top: 20px;
+  font-size: 100px;
+  font-weight: bold;
+  text-align: center;
+}
