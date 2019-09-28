@@ -4,7 +4,7 @@
         "firstLastName": "John Doe",
         "position": "CEO",
         "description": "CEO is a chief executive officer, the highest-rankig corporate officer (executive) or administrator in an organisation.",
-        "image": null,
+        "image": "profile-default-1.png",
         "social": {
           "github": "https://github.com",
           "linkedin": "https://www.linkedin.com",
@@ -15,7 +15,7 @@
         "firstLastName": "Jane Foe",
         "position": "Project Manager",
         "description": "Project managers have the responsibility of the planning, procurement and execution of a project, in any undertaking that has a defined scope, defined start and a defined finish.",
-        "image": "",
+        "image": "profile-default-5.png",
         "social": {
           "github": "https://github.com",
           "linkedin": "https://www.linkedin.com",
@@ -26,7 +26,7 @@
         "firstLastName": "Tom Yoe",
         "position": "Developer",
         "description": "A developer or computer programmer programs computers or designs the system to match the requirements of a systems analyst.",
-        "image": "",
+        "image": "profile-default-3.png,
         "social": {
           "github": "https://github.com",
           "linkedin": "https://www.linkedin.com",
@@ -37,7 +37,7 @@
         "firstLastName": "Lisa Moe",
         "position": "HR Manager",
         "description": "Human resource management (HRM) is the strategic approach to the effective management of people in a company or organization such that they help their business gain a competitive advantage.",
-        "image": "",
+        "image": "profile-default-2.png",
         "social": {
           "github": "https://github.com",
           "linkedin": "https://www.linkedin.com",
