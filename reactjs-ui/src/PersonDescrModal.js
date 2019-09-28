@@ -6,7 +6,7 @@ function PersonDescrModal(props) {
     <div className="sample-plugin-person-modal" style={{display: props.display}} onClick={props.onClick}>
       <div className="person-modal-frame">
         <div className="person-modal-header">
-          <h3 className="modal-header-headline">{props.position}</h3>
+          <h4 className="modal-header-headline">{props.position}</h4>
           <span className="modal-header-close" onClick={props.onClick}>&times;</span>
         </div>
         <div className="modal-content">

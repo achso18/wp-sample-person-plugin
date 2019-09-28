@@ -1,9 +1,10 @@
 .sample-plugin-person-card {
   margin: 50px auto;
   padding: 20px;
-  width: 400px;
+  width: 440px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition: transform 0.3s;
+  line-height: normal;
 }
 
 .sample-plugin-person-card:hover,
@@ -23,8 +24,8 @@
   height: 400px;
   width: 400px;
   color: white;
-  padding-top: 20px;
   font-size: 100px;
   font-weight: bold;
   text-align: center;
+  overflow: hidden;
 }
