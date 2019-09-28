@@ -4,4 +4,6 @@ import Person from './Person.js';
 import './index.css';
 
 let rootElement = document.getElementById('wpsp-person-root');
-ReactDOM.render(<Person person_name={rootElement.getAttribute('person_name')}/>, rootElement);
+ReactDOM.render(<Person person_name={rootElement.getAttribute('person_name')}
+                image_url={rootElement.getAttribute('image_url')}
+                />, rootElement);

@@ -7,7 +7,7 @@ const persons = data.persons;
 let person = "";
 
 function PersonPic(props) {
-  let altText = "Picture of " + props.image;
+  let altText = "Picture of " + props.firstLastName;
   return (
     <div className="sample-plugin-person-pic">
       <img src={props.image} alt={altText} height="400" width="400"/>
@@ -61,7 +61,8 @@ class Person extends React.Component {
       <div className="sample-plugin-person">
           <div className="sample-plugin-person-card" onClick={() => this.handleClick()}>
           <PersonPic
-            image={person.image}
+            image={this.props.image_url + person.image}
+            firstLastName={person.firstLastName}
           />
           <div className="sample-plugin-person-detail">
             <PersonName
