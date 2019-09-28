@@ -13,30 +13,32 @@ Author URI: http:/ach.im/
 */
 
 /*******************************************************************************
-Shortcode setup
+Filter the_content
 *******************************************************************************/
-function sample_person_plugin_shortcode($atts = [], $content = null, $tag = '')
+function sample_plugin_add_content($content)
 {
-  $atts = array_change_key_case((array)$atts, CASE_LOWER);
+  $sample_plugin_persons = array('John Doe', 'Jane Foe', 'Tom Yoe', 'Lisa Moe');
 
-  $sample_person_plugin_atts = shortcode_atts([
-    'person_name' => 'John Doe',
-  ], $atts, $tag);
+  if (is_singular('page') && in_the_loop()) {
 
-  $out = '<div class="wpsp-person-box" id="wpsp-person-root"';
-  $out .= 'person_name="' . esc_html__($sample_person_plugin_atts['person_name'], 'sample_person_plugin') . '" ';
-  $out .= 'image_url="' . plugin_dir_url( __FILE__ ) . 'images/">';
-  $out .= '</div>';
+    foreach ($sample_plugin_persons as $key => $person_name) {
+      
+      if (substr_compare($content, $person_name, 4, strlen($person_name), true) === 0) {
 
-  return $out;
+        $newContent = '<div class="person-box" id="wpsp-person-root"';
+        $newContent .= 'person_name="' . $person_name .'" ';
+        $newContent .= 'image_url="' . plugin_dir_url( __FILE__ ) . 'images/">';
+        $newContent .= '</div>';
+
+        return $newContent;
+      }
+    }
+  }
+  // leave the_content on all other post_types as is
+  return $content;
 }
 
-function sample_person_plugin_shortcodes_init()
-{
-  add_shortcode('sample_person_plugin', 'sample_person_plugin_shortcode');
-}
-
-add_action('init', 'sample_person_plugin_shortcodes_init');
+add_filter('the_content', 'sample_plugin_add_content');
 
 /*******************************************************************************
 Enqueue scripts and styles
