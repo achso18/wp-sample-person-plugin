@@ -61,7 +61,7 @@ class Person extends React.Component {
       <div className="sample-plugin-person">
           <div className="sample-plugin-person-card" onClick={() => this.handleClick()}>
           <PersonPic
-            image={null}
+            image={person.image}
           />
           <div className="sample-plugin-person-detail">
             <PersonName
