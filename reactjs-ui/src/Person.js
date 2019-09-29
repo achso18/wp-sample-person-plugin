@@ -3,7 +3,6 @@ import PersonDescrModal from './PersonDescrModal.js';
 import './Person.css';
 import persons from './sample_person_data.json';
 
-
 function PersonPic(props) {
   let altText = "Picture of " + props.firstLastName;
   return (
@@ -37,7 +36,8 @@ class Person extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      modalDisplay: "none"
+      modalDisplay: "none",
+      response: "",
     }
 
     for (let p of persons) {
@@ -46,6 +46,23 @@ class Person extends React.Component {
         break;
       }
     }
+  }
+
+  componentDidMount() {
+    fetch(
+      wpsp_http_object.ajax_url, {
+      method: "post",
+      _ajax_nonce: wpsp_http_object.nonce,
+      action: "get_person_data",
+      title: "John Doe"
+    })
+    .then(res => res.json())
+    .then((result) => {
+      this.setState({
+        response: result.response
+      });
+      console.log(JSON.stringify(result));
+    })
   }
 
   handleClick() {
