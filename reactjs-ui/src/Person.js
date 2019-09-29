@@ -1,7 +1,9 @@
 import React from 'react';
 import PersonDescrModal from './PersonDescrModal.js';
 import './Person.css';
-import persons from './sample_person_data.json';
+
+const wpsp_http_object = window.wpsp_http_object;
+const jQuery = window.jQuery;
 
 function PersonPic(props) {
   let altText = "Picture of " + props.firstLastName;
@@ -31,38 +33,30 @@ function PersonPos(props) {
 
 class Person extends React.Component {
 
-  person = "";
-
   constructor(props) {
     super(props);
+    
     this.state = {
       modalDisplay: "none",
-      response: "",
+      isLoading: "true"
     }
 
-    for (let p of persons) {
-      if (p.firstLastName.toLowerCase() === this.props.person_name.toLowerCase()) {
-        this.person = p;
-        break;
-      }
-    }
+    this.person = "";
   }
 
   componentDidMount() {
-    fetch(
-      wpsp_http_object.ajax_url, {
-      method: "post",
-      _ajax_nonce: wpsp_http_object.nonce,
-      action: "get_person_data",
-      title: "John Doe"
-    })
-    .then(res => res.json())
-    .then((result) => {
-      this.setState({
-        response: result.response
-      });
-      console.log(JSON.stringify(result));
-    })
+
+    let body = { '_ajax_nonce': wpsp_http_object.nonce,
+                 'action': 'send_person_data',
+                 'person_name': this.props.person_name
+               };
+
+    var that = this;
+    jQuery.post( wpsp_http_object.ajax_url, body,
+      function(person_data) {
+        that.person = person_data;
+        that.setState({isLoading: false});
+    });
   }
 
   handleClick() {
