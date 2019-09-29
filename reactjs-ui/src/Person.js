@@ -1,15 +1,13 @@
 import React from 'react';
 import PersonDescrModal from './PersonDescrModal.js';
 import './Person.css';
-import data from './sample_person_data.json';
+import persons from './sample_person_data.json';
 
-const persons = data.persons;
-let person = "";
 
 function PersonPic(props) {
   let altText = "Picture of " + props.firstLastName;
   return (
-    <div className="sample-plugin-person-pic">
+    <div className="wpsp-person-pic">
       <img src={props.image} alt={altText} height="400" width="400"/>
     </div>
   );
@@ -17,7 +15,7 @@ function PersonPic(props) {
 
 function PersonName(props) {
   return (
-    <div className="sample-plugin-person-fname">
+    <div className="wpsp-person-fname">
       {props.firstLastName == null ? "Name not recognized!" : props.firstLastName}
     </div>
   );
@@ -25,7 +23,7 @@ function PersonName(props) {
 
 function PersonPos(props) {
   return (
-    <div className="sample-plugin-person-pos">
+    <div className="wpsp-person-pos">
       {props.position}
     </div>
   );
@@ -33,6 +31,9 @@ function PersonPos(props) {
 
 
 class Person extends React.Component {
+
+  person = "";
+
   constructor(props) {
     super(props);
     this.state = {
@@ -41,7 +42,7 @@ class Person extends React.Component {
 
     for (let p of persons) {
       if (p.firstLastName.toLowerCase() === this.props.person_name.toLowerCase()) {
-        person = p;
+        this.person = p;
         break;
       }
     }
@@ -58,27 +59,27 @@ class Person extends React.Component {
 
   render() {
     return (
-      <div className="sample-plugin-person">
-          <div className="sample-plugin-person-card" onClick={() => this.handleClick()}>
+      <div className="wpsp-person">
+          <div className="wpsp-person-card" onClick={() => this.handleClick()}>
           <PersonPic
-            image={this.props.image_url + person.image}
-            firstLastName={person.firstLastName}
+            image={this.props.image_url + this.person.image}
+            firstLastName={this.person.firstLastName}
           />
-          <div className="sample-plugin-person-detail">
+          <div className="wpsp-person-detail">
             <PersonName
-              firstLastName={person.firstLastName}
+              firstLastName={this.person.firstLastName}
             />
             <PersonPos
-              position={person.position}
+              position={this.person.position}
             />
           </div>
         </div>
         <PersonDescrModal
           display={this.state.modalDisplay}
           onClick={() => this.handleClick()}
-          position={person.position}
-          description={person.description}
-          social={person.social}
+          firstLastName={this.person.firstLastName}
+          description={this.person.description}
+          social={this.person.social}
         />
       </div>
     );

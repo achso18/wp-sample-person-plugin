@@ -1,4 +1,4 @@
-.sample-plugin-person-modal {
+.wpsp-person-modal {
   position: fixed;
   z-index: 1;
   /* padding-top: 100px; */
@@ -14,7 +14,7 @@
   animation-duration: 0.4s;
 }
 
-.person-modal-frame {
+.wpsp-person-modal-frame {
   background-color: #fff;
   position: fixed;
   top: 25%;
@@ -29,17 +29,17 @@
   animation-duration: 0.2s;
 }
 
-.person-modal-header {
+.wpsp-person-modal-header {
   background-color: #ddd;
   height: 2em;
 }
 
-.modal-header-headline {
+.wpsp-modal-header-headline {
   float: left;
   margin: 5px 10px 10px 15px;
 }
 
-.modal-header-close {
+.wpsp-modal-header-close {
   float: right;
   color: #888;
   margin-right: 15px;
@@ -49,25 +49,25 @@
   transition: transform 0.2s;
 }
 
-.modal-header-close:hover,
-.modal-header-close:focus {
+.wpsp-modal-header-close:hover,
+.wpsp-modal-header-close:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
   transform: scale(1.3);
 }
 
-.modal-content {
+.wpsp-modal-content {
   padding: 15px;
 }
 
-.modal-social-list {
+.wpsp-modal-social-list {
   list-style-type: none;
   margin: 0 0 20px 15px;
   padding: 0;
 }
 
-.modal-social-list li {
+.wpsp-modal-social-list li {
   display: inline;
   margin-right: 2em;
 }

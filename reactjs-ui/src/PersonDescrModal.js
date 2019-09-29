@@ -3,17 +3,17 @@ import './PersonDescrModal.css';
 
 function PersonDescrModal(props) {
   return (
-    <div className="sample-plugin-person-modal" style={{display: props.display}} onClick={props.onClick}>
-      <div className="person-modal-frame">
-        <div className="person-modal-header">
-          <h4 className="modal-header-headline">{props.position}</h4>
-          <span className="modal-header-close" onClick={props.onClick}>&times;</span>
+    <div className="wpsp-person-modal" style={{display: props.display}} onClick={props.onClick}>
+      <div className="wpsp-person-modal-frame">
+        <div className="wpsp-person-modal-header">
+          <h4 className="wpsp-modal-header-headline">{props.firstLastName}</h4>
+          <span className="wpsp-modal-header-close" onClick={props.onClick}>&times;</span>
         </div>
-        <div className="modal-content">
+        <div className="wpsp-modal-content">
           <p>{props.description}</p>
         </div>
-        <div className="modal-social">
-          <ul className="modal-social-list">
+        <div className="wpsp-modal-social">
+          <ul className="wpsp-modal-social-list">
             <li><a href={props.social ? props.social.github : ""}>Github</a></li>
             <li><a href={props.social ? props.social.linkedin : ""}>LinkedIn</a></li>
             <li><a href={props.social ? props.social.xing : ""}>Xing</a></li>
