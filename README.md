@@ -8,6 +8,8 @@ I have only used *reactjs* for building the UI as this was part of the job descr
 
 For the final version in the master branch, I have also made use of jQuery which is also included in WP anyway.
 
+The plugin was developed and tested with **WordPress 5.2.3**.
+
 ### Code organization
 
 The code resides mainly in two folders.
