@@ -1,26 +1,25 @@
-{
-  "persons": [
-      {
-        "firstLastName": "John Doe",
-        "position": "CEO",
-        "description": "CEO is a chief executive officer, the highest-rankig corporate officer (executive) or administrator in an organisation.",
-        "image": "profile-default-1.png",
-        "social": {
-          "github": "https://github.com",
-          "linkedin": "https://www.linkedin.com",
-          "xing": "https://www.xing.com",
-          "facebook": "https://www.facebook.com" }
-      },
-      {
-        "firstLastName": "Jane Foe",
-        "position": "Project Manager",
-        "description": "Project managers have the responsibility of the planning, procurement and execution of a project, in any undertaking that has a defined scope, defined start and a defined finish.",
-        "image": "profile-default-5.png",
-        "social": {
-          "github": "https://github.com",
-          "linkedin": "https://www.linkedin.com",
-          "xing": "https://www.xing.com",
-          "facebook": "https://www.facebook.com" }
+[
+  {
+    "firstLastName": "John Doe",
+    "position": "CEO",
+    "description": "CEO is a chief executive officer, the highest-rankig corporate officer (executive) or administrator in an organisation.",
+    "image": "profile-default-1.png",
+    "social": {
+      "github": "https://github.com",
+      "linkedin": "https://www.linkedin.com",
+      "xing": "https://www.xing.com",
+      "facebook": "https://www.facebook.com" }
+    },
+    {
+      "firstLastName": "Jane Foe",
+      "position": "Project Manager",
+      "description": "Project managers have the responsibility of the planning, procurement and execution of a project, in any undertaking that has a defined scope, defined start and a defined finish.",
+      "image": "profile-default-5.png",
+      "social": {
+        "github": "https://github.com",
+        "linkedin": "https://www.linkedin.com",
+        "xing": "https://www.xing.com",
+        "facebook": "https://www.facebook.com" }
       },
       {
         "firstLastName": "Tom Yoe",
@@ -32,17 +31,16 @@
           "linkedin": "https://www.linkedin.com",
           "xing": "https://www.xing.com",
           "facebook": "https://www.facebook.com" }
-      },
-      {
-        "firstLastName": "Lisa Moe",
-        "position": "HR Manager",
-        "description": "Human resource management (HRM) is the strategic approach to the effective management of people in a company or organization such that they help their business gain a competitive advantage.",
-        "image": "profile-default-2.png",
-        "social": {
-          "github": "https://github.com",
-          "linkedin": "https://www.linkedin.com",
-          "xing": "https://www.xing.com",
-          "facebook": "https://www.facebook.com" }
-       }
-  ]
-}
+        },
+        {
+          "firstLastName": "Lisa Moe",
+          "position": "HR Manager",
+          "description": "Human resource management (HRM) is the strategic approach to the effective management of people in a company or organization such that they help their business gain a competitive advantage.",
+          "image": "profile-default-2.png",
+          "social": {
+            "github": "https://github.com",
+            "linkedin": "https://www.linkedin.com",
+            "xing": "https://www.xing.com",
+            "facebook": "https://www.facebook.com" }
+          }
+        ]
