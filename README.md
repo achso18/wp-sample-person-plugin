@@ -18,3 +18,8 @@ The script files are already the newest build of the reactjs ui.
 
 The other folder contains the reactjs code base. It was created with *create-react-app*.
 When making changes to the code it needs to be rebuild and moved to the `sample-person-plugin/js/` and `sample-person-plugin/css/` directories, respectively.
+
+### Functionality
+The name that is written on a *content_type* __page__ is replaced by the reactjs ui.
+The difference is now that the plugin is organized as a class and manages all the data itself.
+After the name is recognized and the ui is rendered, the ui itself has to request the persons details from the sever side plugin.
