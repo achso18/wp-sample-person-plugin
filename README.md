@@ -17,4 +17,4 @@ It compromises of the main plugin php file and other subfolders for the assets a
 The script files are already the newest build of the reactjs ui.
 
 The other folder contains the reactjs code base. It was created with *create-react-app*.
-When making changes to the code it needs to be rebuild and moved to the *sample-person-plugin/js/* and *sample-person-plugin/css/* directories, respectively.
+When making changes to the code it needs to be rebuild and moved to the `sample-person-plugin/js/` and `sample-person-plugin/css/` directories, respectively.
